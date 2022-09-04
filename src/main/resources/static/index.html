@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR" >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BabyName</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="css/adminlte.min.css">
+</head>
+<body class="hold-transition login-page dark-mode">
+<div class="login-box">
+  <!-- /.login-logo -->
+  <div class="card card-outline card-primary">
+    <div class="card-header text-center">
+      <a href="#" class="h1"><b>Baby</b>Name</a>
+    </div>
+    <div class="card-body">
+      <p class="login-box-msg">Começar minha sessão</p>
+      <form action="/Nomes/Autenticar" method="post">
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Email" name="usuario" id="user">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Senha" name="senha" id="password">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember" name="remeber">
+              <label for="remember">
+                Lembrar
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+      <div class="social-auth-links text-center mt-2 mb-3">
+        <a href="#" class="btn btn-block btn-primary">
+          <i class="fab fa-facebook mr-2"></i> Entrar pelo Facebook
+        </a>
+
+        <div id="g_id_onload"
+        data-client_id="972824640301-1maldcpr1ueo9nu6f6q3pqg341me74d8.apps.googleusercontent.com"
+        data-context="signin"
+        data-ux_mode="redirect"
+        data-native_id_param="credencial"
+        data-login_uri="http://localhost:8080/Nomes/Autenticar"
+        data-callback="handleCredentialResponse"
+        data-nonce="">
+   </div>
+   
+   <div class="g_id_signin" class="btn btn-primary"
+        data-type="standard"
+        data-shape="rectangular"
+        data-theme="outline"
+         data-text="$ {button.text}"
+         data-size="large"
+         data-logo_alignment="left">
+     </div>
+   
+
+      </div>
+
+      
+      <p class="mb-1">
+        <a href="forgot-password.html">Esqueci minha senha</a>
+      </p>
+     
+    </div>
+    <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+<script src="js/autenticar.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="js/adminlte.min.js"></script>
+</body>
+</html>

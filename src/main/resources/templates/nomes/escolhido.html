@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5" lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BabyName | Escolhido</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+  <!-- pace-progress -->
+  <link rel="stylesheet" href="/plugins/pace-progress/themes/black/pace-theme-flat-top.css">
+  <!-- adminlte-->
+  <link rel="stylesheet" href="/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini pace-primary dark-mode">
+<!-- Site wrapper -->
+<div class="wrapper">
+  <!-- Navbar -->
+  <div th:replace="~{fragments/navegador :: navegador}">...</div>
+
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <div th:replace="~{fragments/menu :: menu}" >...</div>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper mb-12">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-12">
+          <div class="col-sm-12">
+            <h1>Parabéns!!!!!</h1>
+          </div>
+    
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header ">
+          <h3 class="card-title ">O nome escolhido é...</h3>
+
+        </div>
+        <div class="card-body">
+
+       <h2 th:text="${nomeEscolhido.nome}"class="text-blue text-center">Paulo </h2>
+         <p><a th:href="@{/Nomes/SobreNome/{id}(id=${nomeRankeados.nomeEscolhido.id})}">sobre o nome</a></p>
+        </div>
+    
+      </div>
+      <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+
+  </div>
+  <!-- /.content-wrapper -->
+
+  <div th:replace="~{fragments/footer :: footer}">...</div>
+
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- pace-progress -->
+<script src="/plugins/pace-progress/pace.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+
+</body>
+</html>

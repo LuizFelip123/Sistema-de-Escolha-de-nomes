@@ -1,0 +1,9 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "maven.terminal.favorites": [
+        {
+            "alias": "sb:run",
+            "command": "spring-boot:run"
+        }
+    ]
+}

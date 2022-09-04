@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BabyName | Adicionar</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/css/adminlte.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini dark-mode">
+    <div class="wrapper">
+        <!-- Navbar -->
+       <div th:replace="~{fragments/navegador :: navegador}">...</div>
+
+            <!-- Right navbar links -->
+
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <div th:replace="~{fragments/menu :: menu}" >...</div>
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Adicionar Origem</h1>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+
+
+            <div class="card">
+
+                <!-- /.card-header -->
+                <div class="card-body p-0">
+                        <div class="card-header">
+                          <h3 class="card-title">Editar Origem</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form th:action="@{/Origem/Update}" th:object="${origem}"  method="post">
+                          <div class="card-body">
+                            <div class="form-group row">
+                              <label for="nome" class="col-sm-2 col-form-label">descricao</label>
+                              <div class="col-sm-10">
+                                <input type="text" autocomplete="off"  th:field="*{descricao}" class="form-control" name="nome" id="nome" placeholder="Nome">
+                              </div>
+                            </div>
+                           
+                          </div>
+                          <!-- /.card-body -->
+                          <div class="card-footer">
+                           <button type="submit" class="btn btn-info">Editar Origem</button>
+                          </div>
+                          <!-- /.card-footer -->
+                        </form>
+                      
+                </div>
+                <!-- /.card-body -->
+                
+            </div>
+        
+        </div>
+        <!-- /.card -->
+
+    </div>
+
+
+
+    <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+    </div>
+    </div>
+
+
+
+    <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <div th:replace="~{fragments/footer :: footer}">...</div>
+
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/js/adminlte.min.js"></script>
+
+</body>
+
+</html>

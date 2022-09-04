@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" 
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5" lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BabyName | Sobre</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+  <!-- pace-progress -->
+  <link rel="stylesheet" href="/plugins/pace-progress/themes/black/pace-theme-flat-top.css">
+  <!-- adminlte-->
+  <link rel="stylesheet" href="/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini pace-primary dark-mode">
+<!-- Site wrapper -->
+<div class="wrapper">
+  <!-- Navbar -->
+  <div th:replace="~{fragments/navegador :: navegador}">...</div>
+
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+ 
+  <div th:replace="~{fragments/menu :: menu}" >...</div>
+  <!-- Content Wrapper. Contains page content -->
+
+  <div class="content-wrapper" th:object="${nomeEscolhido}">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <p>Sobre o Nome: </p>
+            <h1 th:text="${nomeEscolhido.nome}"> </h1>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Origem</h3>
+
+        </div>
+        <div  class="card-body">
+         <p th:text="${nomeEscolhido?.origem?.descricao}"></p>
+        </div>
+    
+      </div>
+      <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Significado</h3>
+       
+        </div>
+        <div class="card-body" style="text-align: justify;">
+          <p th:text="${nomeEscolhido.significado}"> </p>
+        </div>
+        <!-- /.card-body -->
+        <!-- /.card-footer-->
+      </div>
+      <!-- /.card -->
+
+    </section>
+  </div>
+</div>
+  <!-- /.content-wrapper -->
+
+
+
+
+
+
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- pace-progress -->
+<script src="/plugins/pace-progress/pace.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+
+</body>
+</html>

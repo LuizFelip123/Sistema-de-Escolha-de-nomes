@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"  lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BabyName | Origem</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/css/adminlte.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini dark-mode">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <div th:replace="~{fragments/navegador :: navegador}">...</div>
+
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+       <div th:replace="~{fragments/menu :: menu}" >...</div>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Lista de Origem</h1>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+
+
+            <div class="card">
+                <h2 th:if="${#lists.isEmpty(origens)}">Sem Origem adicionado!</h2>
+                <!-- /.card-header -->
+                <div class="card-body p-0 " th:if="${not #lists.isEmpty(origens)}">
+                   
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="origem : ${origens}">
+                                <td  th:text="${origem.descricao}">...</td>
+                           
+                              
+                            </tr>
+                     
+                                                      
+                        </tbody>
+                    </table>
+
+                </div>
+                <!-- /.card-body -->
+                
+            </div>
+            <a href="/Origem/Adicionar"><button type="button" class="btn bg-gradient-primary float-right">Adicionar</button></a>
+        
+        </div>
+        <!-- /.card -->
+
+    </div>
+
+
+
+    <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+    </div>
+    </div>
+
+
+
+    <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <div th:replace="~{fragments/footer :: footer}">...</div>
+
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/js/adminlte.min.js"></script>
+
+</body>
+
+</html>
