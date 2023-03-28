@@ -42,7 +42,7 @@ public class UsuarioController {
     }
 
     @GetMapping("Match/{id}")
-    public String realizarMatch(@PathVariable("id") long id){
+    public String realizarMatch(@PathVariable("id") long id , Model model){
       model.addAttribute("nomeEscolhido", usuarioService.realizarMatch(id));
       return"nomes/sobre";
     }
